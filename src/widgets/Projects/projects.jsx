@@ -91,8 +91,8 @@ export const projects = (mode) => {
 				"React based portfolio website made with Vite build tool.Includes Lazy loading, light/ dark theme switcher, internationalization and additional dependencies such as react - scroll, react - icons, and integration with Express and Node.App architecture is based on Feature - Sliced Design.",
 			stack: "React, Javascript, CSS modules, Vite, FSD, i18n",
 			img: <img src={!mode ? Portfolio : PortfolioDark} alt="Portfolio website view on different devices" />,
-			mainLink: "",
-			gitLink: "",
+			mainLink: "https://portfolio-ana-emanuela.vercel.app/#about",
+			gitLink: "https://github.com/MANUCISNE/PortfolioAnaEmanuela",
 		},
 	]
 
