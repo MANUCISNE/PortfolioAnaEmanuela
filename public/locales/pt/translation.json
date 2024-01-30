@@ -1,0 +1,34 @@
+{
+    "name": "Nome",
+    "name-placeholder": "Seu Nome",
+    "message": "Messagem",
+    "message-placeholder": "Escreva algo interessante :)",
+
+    "thank-you": "⭐️ Obrigada pela sua mensagem!",
+    "title-skills": "Habilidades & Tecnologias",
+    "title-projects": "Últimos projetos",
+    "title-courses": "Courses & Certificates",
+    "title-contact": "Vamos trabalhar juntos!",
+
+    "main-header": "Hey✨ Eu sou Ana, Frontend React Developer",
+    "main-p1": "Tenho trabalhado na área de desenvolvimento web por volta de 3 anos.",
+    "main-p2": "No meu tempo livre, gosto de passar tempo com minha família, assistir filmes, e praticar futvolei.",
+
+    "contact-btn": "Entre em contato",
+    "cv-btn": "Download CV",
+    "git-btn": "Mostre Git Repo",
+    "demo-btn": "Visite o Website",
+    "lang-btn": "En",
+    "submit-btn": "Enviar",
+
+    "head-about": "Sobre",
+    "head-projects": "Projetos",
+    "head-contact": "Contato",
+
+    "head-theme-light": "Light",
+    "head-theme-dark": "Dark",
+
+    "head-name": "Ana Emanuela",
+
+    "contact-p": "Gostou do meu código? Atualmente estou aberto para trabalho remoto como Desenvolvedor Frontend React."
+}
