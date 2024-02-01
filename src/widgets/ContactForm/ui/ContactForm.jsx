@@ -3,13 +3,14 @@ import axios from "axios";
 import styles from "./ContactForm.module.css";
 import { Button } from "~/shared/UI/Button";
 import { useTranslation } from "react-i18next";
+import sendEmail from "~/services/emailServices";
 
 const ContactForm = ({ mode }) => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
-    user_name: "",
-    user_email: "",
-    message: "",
+    nome: "",
+    email: "",
+    mensagem: "",
   });
   const [formSent, setFormSent] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -37,31 +38,28 @@ const ContactForm = ({ mode }) => {
 
   const form = useRef();
 
-  const sendEmail = async (e) => {
+  const sendEmailService = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("/enviar-email", {
-        nome: formData.user_name,
-        email: formData.user_email,
-        mensagem: formData.message,
+      const response = await sendEmail({
+        nome: formData.nome,
+        email: formData.email,
+        mensagem: formData.mensagem,
       });
-
-      if (response.data.success) {
-        setFormData({
-          user_name: "",
-          user_email: "",
-          message: "",
-        });
-        setFormSent(true);
-      } else {
-        setErrorMessage(t("email-not-sent"));
-      }
 
       console.log(response.data.message);
     } catch (error) {
       console.error("Erro ao enviar e-mail:", error);
       setErrorMessage(t("try-again-later"));
+    } finally {
+          setFormData({
+          nome: "",
+          email: "",
+          mensagem: "",
+        });
+        setFormSent(true);
+
     }
   };
 
@@ -72,34 +70,34 @@ const ContactForm = ({ mode }) => {
           mode ? styles.contactFormDark : styles.contactFormLight
         }`}
         ref={form}
-        onSubmit={sendEmail}
+        onSubmit={sendEmailService}
       >
         <label>{t("name")}</label>
         <input
-          value={formData.user_name}
+          value={formData.nome}
           onChange={handleChange}
           className={styles.contactFormInput}
           type="text"
-          name="user_name"
+          name="nome"
           placeholder={t("name-placeholder")}
           required
         />
         <label>Email</label>
         <input
-          value={formData.user_email}
+          value={formData.email}
           onChange={handleChange}
           className={styles.contactFormInput}
           type="email"
-          name="user_email"
+          name="email"
           placeholder="YourName@email.com"
           required
         />
         <label>{t("message")}</label>
         <textarea
-          value={formData.message}
+          value={formData.mensagem}
           onChange={handleChange}
           className={styles.contactFormArea}
-          name="message"
+          name="mensagem"
           rows="7"
           placeholder={t("message-placeholder")}
           required

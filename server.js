@@ -1,6 +1,7 @@
 import nodemailer from "nodemailer";
 import express from "express";
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 dotenv.config();
 
@@ -10,13 +11,10 @@ const PORT = process.env.PORT;
 
 const app = express();
 app.use(express.json());
-
-app.get('/', (req, res) => { 
-    res.send({ message: 'Hello World 2' });
-})
+app.use(cors());
 
 // Rota para lidar com o formulário
-app.post('/enviar-email', (req, res) => {
+app.post('/', (req, res) => {
     const { nome, email, mensagem } = req.body;
     
   // Configuração do Nodemailer
