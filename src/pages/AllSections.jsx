@@ -76,7 +76,7 @@ const AllSections = ({ mode }) => {
 						</div>
 						<Contacts />
 					</div>
-					<ContactForm mode={mode} />
+					{/*<ContactForm mode={mode} />*/}
 				</div>
 			</Section>
 		</>
