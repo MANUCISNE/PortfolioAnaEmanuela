@@ -3,7 +3,7 @@ import axios from "axios";
 import styles from "./ContactForm.module.css";
 import { Button } from "~/shared/UI/Button";
 import { useTranslation } from "react-i18next";
-import sendEmail from "~/services/emailServices";
+//import sendEmail from "~/services/emailServices";
 
 const ContactForm = ({ mode }) => {
   const { t } = useTranslation();
@@ -38,8 +38,8 @@ const ContactForm = ({ mode }) => {
 
   const form = useRef();
 
-  const sendEmailService = async (e) => {
-    e.preventDefault();
+  {/*const sendEmailService = async (e) => {
+  e.preventDefault();
 
     try {
       const response = await sendEmail({
@@ -61,7 +61,7 @@ const ContactForm = ({ mode }) => {
         setFormSent(true);
 
     }
-  };
+  }*/}
 
   return (
     <div className={styles.contactFormContainer}>
