@@ -67,9 +67,9 @@ const AllSections = ({ mode }) => {
 								<Button color="green">CV ENG</Button>
 							</a>
 							<a
-								href="Anastasia-Zhuravleva-CV-RUS.pdf"
+								href="resume-en.pdf"
 								target="_blank"
-								download="Anastasia-Zhuravleva-CV-RUS.pdf"
+								download="resume-en.pdf"
 							>
 								<Button color="pink">CV PT</Button>
 							</a>
