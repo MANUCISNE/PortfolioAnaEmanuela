@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-const sendEmailUrl = '/enviar-email';
-
 function sendEmail(data) {
     return axios({
         url: 'http://127.0.0.1:3030',
