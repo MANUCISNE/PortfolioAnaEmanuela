@@ -14,12 +14,12 @@ app.use(express.json());
 app.use(cors());
 
 // Rota para lidar com o formulário
-app.post('/', (req, res) => {
+app.post('/', cors(), (req, res) => {
     const { nome, email, mensagem } = req.body;
     
   // Configuração do Nodemailer
     const transporter = nodemailer.createTransport({
-        service: 'gmail', // Exemplo: 'Gmail'
+        service: 'gmail', 
         auth: {
             user: USER_EMAIL,
             pass: USER_EMAIL_PASSWORD,

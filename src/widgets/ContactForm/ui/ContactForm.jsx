@@ -3,7 +3,7 @@ import axios from "axios";
 import styles from "./ContactForm.module.css";
 import { Button } from "~/shared/UI/Button";
 import { useTranslation } from "react-i18next";
-//import sendEmail from "~/services/emailServices";
+import sendEmail from "~/services/emailServices";
 
 const ContactForm = ({ mode }) => {
   const { t } = useTranslation();
@@ -38,7 +38,7 @@ const ContactForm = ({ mode }) => {
 
   const form = useRef();
 
-  {/*const sendEmailService = async (e) => {
+  const sendEmailService = async (e) => {
   e.preventDefault();
 
     try {
@@ -59,9 +59,8 @@ const ContactForm = ({ mode }) => {
           mensagem: "",
         });
         setFormSent(true);
-
     }
-  }*/}
+  }
 
   return (
     <div className={styles.contactFormContainer}>
@@ -105,7 +104,7 @@ const ContactForm = ({ mode }) => {
         <Button type="submit" value="Send">
           {t("submit-btn")}
         </Button>
-        {formSent && <p className={styles.messageSent}>{t("thank-you")}</p>}
+        {formSent && !errorMessage && <p className={styles.messageSent}>{t("thank-you")}</p>}
         {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
       </form>
     </div>
