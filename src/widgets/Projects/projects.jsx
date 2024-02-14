@@ -1,8 +1,8 @@
-import ToDoTheList from "~/shared/assets/todo.webp"
-import ToDoTheListDark from "~/shared/assets/todo-dark.webp"
+import ToDoTheList from "~/shared/assets/todo.svg"
+import ToDoTheListDark from "~/shared/assets/todo-dark.svg"
 
-import LandPageIfood from "~/shared/assets/mern.webp"
-import LandPageIfoodDark from "~/shared/assets/mern-dark.webp"
+import LandPageIfood from "~/shared/assets/ifood-page.svg"
+import LandPageIfoodDark from "~/shared/assets/ifood-page-dark.svg"
 
 import PetSocialNetwork from "~/shared/assets/toon.webp"
 import PetSocialNetworkDark from "~/shared/assets/toon-dark.webp"
