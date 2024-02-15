@@ -1,22 +1,22 @@
-import ToDoTheList from "~/shared/assets/todo.svg"
-import ToDoTheListDark from "~/shared/assets/todo-dark.svg"
+import ToDoTheList from "~/shared/assets/todo.webp"
+import ToDoTheListDark from "~/shared/assets/todo-dark.webp"
 
-import LandPageIfood from "~/shared/assets/ifood-page.svg"
-import LandPageIfoodDark from "~/shared/assets/ifood-page-dark.svg"
+import LandPageIfood from "~/shared/assets/ifood-light.webp"
+import LandPageIfoodDark from "~/shared/assets/ifood-dark.webp"
 
-import PetSocialNetwork from "~/shared/assets/toon.webp"
-import PetSocialNetworkDark from "~/shared/assets/toon-dark.webp"
+import PetSocialNetwork from "~/shared/assets/pet-social-light.webp"
+import PetSocialNetworkDark from "~/shared/assets/pet-social-dark.webp"
 
 import WorkTime from "~/shared/assets/weather.webp"
 import WorkTimeDark from "~/shared/assets/weather-dark.webp"
 
-import EcommerceTechProducts from "~/shared/assets/metaverse.webp"
-import EcommerceTechProductsDark from "~/shared/assets/metaverse-dark.webp"
+import EcommerceTechProducts from "~/shared/assets/ecommerce-tech-light.webp"
+import EcommerceTechProductsDark from "~/shared/assets/ecommerce-tech-dark.webp"
 
-import FlexBlog from "~/shared/assets/ingrad.webp"
-import FlexBlogDark from "~/shared/assets/ingrad-dark.webp"
+import FlexBlog from "~/shared/assets/flexblog-light.webp"
+import FlexBlogDark from "~/shared/assets/flexblog-dark.webp"
 
-import Portfolio from "~/shared/assets/portfolio.webp"
+import Portfolio from "~/shared/assets/portfolio-light.webp"
 import PortfolioDark from "~/shared/assets/portfolio-dark.webp"
 
 export const projects = (mode) => {
