@@ -11,7 +11,7 @@ const ContactForm = ({ mode }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    mesage: "",
+    message: "",
   });
   const [formSent, setFormSent] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -44,7 +44,7 @@ const ContactForm = ({ mode }) => {
       const response = await sendEmail({
         name: formData.name,
         email: formData.email,
-        mesage: formData.mesage,
+        message: formData.message,
       });
 
       console.log(response.data.message);
@@ -55,7 +55,7 @@ const ContactForm = ({ mode }) => {
           setFormData({
           name: "",
           email: "",
-          mesage: "",
+          message: "",
         });
         setFormSent(true);
     }
@@ -92,10 +92,10 @@ const ContactForm = ({ mode }) => {
         />
         <label>{t("message")}</label>
         <textarea
-          value={formData.mesage}
+          value={formData.message}
           onChange={handleChange}
           className={styles.contactFormArea}
-          name="mesage"
+          name="message"
           rows="7"
           placeholder={t("message-placeholder")}
           required
