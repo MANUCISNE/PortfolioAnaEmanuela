@@ -7,8 +7,8 @@ import LandPageIfoodDark from "~/shared/assets/ifood-dark.webp"
 import PetSocialNetwork from "~/shared/assets/pet-social-light.webp"
 import PetSocialNetworkDark from "~/shared/assets/pet-social-dark.webp"
 
-import WorkTime from "~/shared/assets/weather.webp"
-import WorkTimeDark from "~/shared/assets/weather-dark.webp"
+import WorkTime from "~/shared/assets/worktime-light.webp"
+import WorkTimeDark from "~/shared/assets/worktime-dark.webp"
 
 import EcommerceTechProducts from "~/shared/assets/ecommerce-tech-light.webp"
 import EcommerceTechProductsDark from "~/shared/assets/ecommerce-tech-dark.webp"
