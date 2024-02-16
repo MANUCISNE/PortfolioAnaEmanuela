@@ -16,7 +16,7 @@ app.use(cors());
 // Rota para lidar com o formulário
 app.post('/', cors(), (req, res) => {
     const { name, email, message } = req.body;
-
+    console.log(req.body);
     fetch(WEBHOOK_URL, {
         method: 'POST',
         body: JSON.stringify({
