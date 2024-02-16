@@ -17,15 +17,6 @@ const ContactForm = ({ mode }) => {
   const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
-    const temp = localStorage.getItem("formData");
-    const loadedFormData = JSON.parse(temp);
-
-    if (loadedFormData) {
-      setFormData(loadedFormData);
-    }
-  }, []);
-
-  useEffect(() => {
     const temp = JSON.stringify(formData);
     localStorage.setItem("formData", temp);
   }, [formData]);
