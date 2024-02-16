@@ -7,10 +7,11 @@ import sendEmail from "~/services/emailServices";
 
 const ContactForm = ({ mode }) => {
   const { t } = useTranslation();
+  const form = useRef();
   const [formData, setFormData] = useState({
-    nome: "",
+    name: "",
     email: "",
-    mensagem: "",
+    mesage: "",
   });
   const [formSent, setFormSent] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -36,16 +37,14 @@ const ContactForm = ({ mode }) => {
     });
   };
 
-  const form = useRef();
-
   const sendEmailService = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
     try {
       const response = await sendEmail({
-        nome: formData.nome,
+        name: formData.name,
         email: formData.email,
-        mensagem: formData.mensagem,
+        mesage: formData.mesage,
       });
 
       console.log(response.data.message);
@@ -54,9 +53,9 @@ const ContactForm = ({ mode }) => {
       setErrorMessage(t("try-again-later"));
     } finally {
           setFormData({
-          nome: "",
+          name: "",
           email: "",
-          mensagem: "",
+          mesage: "",
         });
         setFormSent(true);
     }
@@ -73,11 +72,11 @@ const ContactForm = ({ mode }) => {
       >
         <label>{t("name")}</label>
         <input
-          value={formData.nome}
+          value={formData.name}
           onChange={handleChange}
           className={styles.contactFormInput}
           type="text"
-          name="nome"
+          name="name"
           placeholder={t("name-placeholder")}
           required
         />
@@ -93,10 +92,10 @@ const ContactForm = ({ mode }) => {
         />
         <label>{t("message")}</label>
         <textarea
-          value={formData.mensagem}
+          value={formData.mesage}
           onChange={handleChange}
           className={styles.contactFormArea}
-          name="mensagem"
+          name="mesage"
           rows="7"
           placeholder={t("message-placeholder")}
           required
